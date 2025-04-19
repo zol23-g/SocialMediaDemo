@@ -1,0 +1,19 @@
+# src/modules/post/schema.graphql
+type Post {
+  id: ID!
+  caption: String
+  media: String!
+  timestamp: String!
+  user: User!
+}
+
+type Query {
+  posts: [Post!]!
+  post(id: ID!): Post
+}
+
+type Mutation {
+  createPost(caption: String, media: String!): Post!
+  deletePost(id: ID!): Boolean!
+  updatePost(id: ID!, caption: String, media: String): Post!
+}

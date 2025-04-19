@@ -1,0 +1,20 @@
+# src/modules/comment/schema.graphql
+type Comment {
+  id: ID!
+  content: String!
+  timestamp: String!
+  user: User!
+  post: Post!
+  parent: Comment
+  replies: [Comment!]
+}
+
+type Query {
+  comments(postId: ID!): [Comment!]!
+}
+
+type Mutation {
+  addComment(postId: ID!, content: String!, parentId: ID): Comment!
+  deleteComment(id: ID!): Boolean! 
+  updateComment(id: ID!, content: String!): Comment!
+}

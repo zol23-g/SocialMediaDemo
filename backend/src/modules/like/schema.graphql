@@ -1,0 +1,17 @@
+# src/modules/like/schema.graphql
+type Like {
+  id: ID!
+  user: User!
+  post: Post!
+}
+
+type Query {
+  likes(postId: ID!): [Like!]!
+  hasLiked(postId: ID!): Boolean!
+}
+
+type Mutation {
+  toggleLike(postId: ID!): Boolean!
+  likePost(postId: ID!): Boolean!
+  unlikePost(postId: ID!): Boolean!
+}

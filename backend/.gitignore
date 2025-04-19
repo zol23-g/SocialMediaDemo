@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+.env
+*.log
+log.txt
+
+# Prisma
+.prisma/
+*.db
+prisma/migrations/
+
+# IDE/OS
+.vscode/
+*.DS_Store
+*.swp
+*.swo
+
+# Testing
+coverage/
+.nyc_output/
+
+# ts-node-dev
+tmp/
+*.tsbuildinfo
+# image files
+uploads/*
+
+package-lock.json

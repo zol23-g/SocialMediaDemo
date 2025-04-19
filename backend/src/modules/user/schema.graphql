@@ -1,0 +1,24 @@
+# src/modules/user/schema.graphql
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  bio: String
+  profilePic: String
+  createdAt: String!
+   role: String!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type Query {
+  me: User
+}
+
+type Mutation {
+  signup(username: String!, email: String!, password: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+}

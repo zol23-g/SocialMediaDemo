@@ -1,0 +1,17 @@
+# src/modules/rating/schema.graphql
+type Rating {
+  id: ID!
+  value: Int!
+  user: User!
+  post: Post!
+}
+
+type Query {
+  averageRating(postId: ID!): Float!
+  myRating(postId: ID!): Int
+}
+
+type Mutation {
+  ratePost(postId: ID!, value: Int!): Rating!
+  deleteRating(postId: ID!): Boolean!
+}
