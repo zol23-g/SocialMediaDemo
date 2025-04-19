@@ -1,50 +1,60 @@
-# Welcome to your Expo app 👋
+# 📱 Social Media App – Frontend (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is the mobile frontend for the Social Media App built using **React Native + Expo + Apollo Client**. It connects to a GraphQL backend and supports user authentication, posting, liking, commenting, and rating features.
 
-## Get started
+---
 
-1. Install dependencies
+## ⚙️ Tech Stack
 
-   ```bash
-   npm install
-   ```
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [GraphQL](https://graphql.org/)
+- [Formik + Yup](https://formik.org/)
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 🚀 Getting Started
 
 ```bash
-npm run reset-project
+# 1. Install dependencies
+npm install
+
+# 2. Set up environment variables
+# Create a .env file in root with:
+GRAPHQL_URI=http://<your-backend-host>:4000/graphql
+
+# 3. Start the app
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📁 Project Structure
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+app/
+├── (auth)/         → Login & Signup screens
+├── (app)/          → Feed, Create, Profile screens
+├── comments/       → Comments with nested replies
+components/         → Reusable UI and screen components
+graphql/            → Queries & Mutations
+hooks/              → Custom hooks (auth, image picker)
+utils/              → Helper functions (media url, etc.)
+apollo/             → Apollo Client setup
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## ✅ Features
 
-Join our community of developers creating universal apps.
+- JWT-based login/signup
+- Post creation with media upload
+- Like & rate posts (1–5 stars)
+- Nested comments & replies
+- Auth-protected navigation
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+
