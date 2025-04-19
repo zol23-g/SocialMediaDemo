@@ -1,27 +1,27 @@
-# 🌐 Social Media Demo App – Full Stack
+# Social Media Demo App – Full Stack
 
 A complete **GraphQL-powered Social Media App** built with:
 
-- 📲 **React Native + Expo** for the mobile frontend
-- 🧠 **Node.js + Apollo Server + Prisma + PostgreSQL** for the backend
+- **React Native + Expo** for the mobile frontend
+- **Node.js + Apollo Server + Prisma + PostgreSQL** for the backend
 
 Supports user authentication, media upload, likes, comments (with replies), and ratings.
 
 ---
 
-## 🧩 Stack Overview
+## Stack Overview
 
 | Layer     | Tech                                     |
 |-----------|------------------------------------------|
 | Frontend  | React Native, Expo, Apollo Client        |
 | Backend   | Node.js, Apollo Server, Express          |
-| Database  | PostgreSQL, Prisma ORM                   |
-| Auth      | JWT, AsyncStorage                        |
+| Database  | MySQL, Prisma ORM                   |
+| Auth      | JWT                       |
 | Uploads   | `graphql-upload`                         |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 /
